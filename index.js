@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Configuration de la connexion à la base de données
-mongoose.connect('mongodb+srv://TolusNowa:Nowamarket123456789@clustertest.nzjt155.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -26,7 +26,7 @@ db.once('open', () => {
 
 const shopify = new Shopify({
   shopName: 'nowatest',
-  accessToken: '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'
+  accessToken: 'shpat_'
 });
 
 // Configuration des routes
